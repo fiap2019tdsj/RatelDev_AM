@@ -1462,3 +1462,11 @@
 2019-10-20 13:29:52,706 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\caroline.muniz\Documents\RatelDev_AM\rateldev\src\main\resources
 2019-10-20 13:29:52,716 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-10-20 13:29:52,722 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\caroline.muniz\Documents\RatelDev_AM\rateldev\src\test\resources
+2019-10-20 13:46:24,575 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-20 13:46:24,576 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\caroline.muniz\Documents\RatelDev_AM\rateldev\src\main\resources
+2019-10-20 13:46:24,577 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-20 13:46:24,587 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\caroline.muniz\Documents\RatelDev_AM\rateldev\src\test\resources
+2019-10-20 13:46:30,853 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-20 13:46:30,884 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\caroline.muniz\Documents\RatelDev_AM\rateldev\src\main\resources
+2019-10-20 13:46:30,893 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-20 13:46:30,899 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\caroline.muniz\Documents\RatelDev_AM\rateldev\src\test\resources
