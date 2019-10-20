@@ -16,7 +16,7 @@ import com.ibm.watson.assistant.v1.model.MessageOptions;
 import com.ibm.watson.assistant.v1.model.MessageResponse;
 import com.ibm.watson.assistant.v1.Assistant;
 
-@WebServlet(urlPatterns = "/v1")
+@WebServlet(urlPatterns = "/chatbot")
 public class AssistantServlet extends HttpServlet {
 	
 	private Context context;
@@ -39,12 +39,12 @@ public class AssistantServlet extends HttpServlet {
 
 		// Configuração de autenticação do serviço
 		IamOptions options = new IamOptions.Builder()
-				.apiKey("<apikey>")
+				.apiKey("ZQd-enXOKkpH8WOpFNad_3qCdM3CSYpiPaXX6RBsDapT")
 				.build();
 		
 		// Criando o objeto do serviço desejado
 		Assistant service = new Assistant("2018-02-16", options);
-		String workspaceId = "<skill_id>";
+		String workspaceId = "d5522a24-7bb3-4b23-a813-333ecfb63809";
 		
 		// Preparando a mensagem de envio
 		MessageInput input = new MessageInput();

@@ -20,14 +20,14 @@ INDEX VERSION 1.131+C:\Users\caroline.muniz\Documents\RatelDev_AM\.metadata\.plu
 1506073381.index
 762736664.index
 2621009363.index
-3202541097.index
 324049132.index
+3202541097.index
 1459523266.index
 4069293921.index
 2894389153.index
 364096953.index
-2174815809.index
 2845807539.index
+2174815809.index
 3572716771.index
 2539442502.index
 3494971117.index
@@ -36,7 +36,6 @@ INDEX VERSION 1.131+C:\Users\caroline.muniz\Documents\RatelDev_AM\.metadata\.plu
 2755271588.index
 3016326539.index
 3287004609.index
-2443166188.index
 3698715967.index
 3384131066.index
 1541535133.index
