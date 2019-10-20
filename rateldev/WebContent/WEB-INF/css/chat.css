@@ -1,0 +1,27 @@
+.caixa-chat {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 20px;
+    width: 130px;
+    animation: grow .8s infinite;
+    cursor: pointer;
+    transition: 500ms;
+    transition-delay: 1000ms;
+}
+.caixa-chat:hover {
+    height: 90px;
+    transition: 500ms;
+    animation: none;
+}
+.caixa-chat img {
+    width: 100px;
+    
+}
+  @-webkit-keyframes grow {
+    0%, 100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 8;
+  }

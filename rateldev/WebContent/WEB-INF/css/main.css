@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Muli', sans-serif;
+    font-size: 101%;
+    font-weight: lighter;
+}
+h1 {
+    font-size: 250%;
+}
+body {
+    background-color: #000000;
+    
+}
+cores {
+    color: #bf71ff,
+    #b46cf2,
+    #6afff3,
+    #535467,
+    #1cbfff,
+    #ff886a,
+    #186a93,
+    #1fa5e9,
+    #141526,
+    #26273b;
+}
+/* form login e cadastro */
+.container-central {
+    width: 1000px;
+    height: 600px;
+    background-color: #141526;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.container-central .container-esquerdo {
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+.container-central .container-direito {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0px 5px 5px 0px;
+}
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #141526 inset;
+}
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: #ffffff !important;
+}
+input {
+    width: 96.6%;
+    border-radius: 5px;
+    background-color: #141526;
+    border: 1px solid #141526;
+    outline: none;
+    padding: 3px 6px;
+    text-transform: lowercase;
+    margin-top: 3px;
+}
+input:focus {
+    border: 1px solid #1cbfff;
+    transition: 1s; 
+    border-radius: 5px;
+}
+input:hover {
+    border: 1px solid #1cbfff;
+    transition: 1s; 
+}
+button {
+    background-color: #535467;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #535467;
+    outline: none;
+    padding: 3px 6px;
+}
+button:focus {
+    border: 1px solid #1fa5e9;
+    transition: 1s; 
+    border-radius: 5px;
+    background-color: #1fa5e9;
+}
+button:hover {
+    background-color: #1fa5e9;
+    /* color: #141526; */
+    transition: 1s;
+    border: solid 1px #1fa5e9;
+}
+button:disabled:hover {
+    background-color: #535467;
+    cursor: not-allowed ;
+    border: 1px solid #535467;
+}
+#pop-up-nome, #pop-up-email, #pop-up-senha, #pop-up-repitaSenha {
+    width: 100%;
+    background-color: #ff886a;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 5px 0;
+    display: none;
+}
+.erro {
+    border: solid 1px #ff886a;
+}
