@@ -1,0 +1,9 @@
+package br.com.fiap.rateldev.beans;
+
+import java.sql.Date;
+
+public class LogWatson {
+	private int id;
+	private String sentenca;
+	private Date data;
+}

@@ -1,0 +1,75 @@
+.topo {
+    width: 100%;
+    height: 60px;
+    overflow: visible;
+    top: 0px;
+    background-color: #141526;
+    position: fixed;
+}
+.logo-topo{
+    float: left;
+    font-weight: 900;
+    width: 100px;
+}
+.logo-topo h1:hover{
+    color: #1cbfff;
+    cursor: pointer;
+}
+.centraliza-topo {
+    max-width: 1300px;
+    margin: auto;
+}
+.login-topo .material-icons{
+    float: right;
+    font-size: 40px;
+    margin-top: 10px;
+}
+.login-topo .material-icons:hover {
+    color: #1cbfff;
+    cursor: pointer;
+    
+}
+.centraliza-conteudo {
+    background-color: #141526;
+    width: 1349px;
+    margin: auto;
+    margin-top: 60px;;
+}
+.bloco-conteudo {
+    float: left;
+    padding: 34px;
+    width: 44.9%;
+    height: 430px;
+    background-color: #141526;
+}
+.topico {
+    width: 1349px;
+    height: 80px;
+    background-color: #26273b;
+    float: left;
+    text-align: center;
+}
+.topico h1{
+    font-size: 200%;
+    margin-top: 18px;
+}
+.topico:hover {
+    cursor: pointer;
+    color: #1cbfff !important;
+    background-color: #3c3d52 !important;
+}
+.rodape {
+    float: left;
+    width: 100%;
+    height: 60px;
+    overflow: visible;
+    bottom: 0px;
+}
+.centraliza-rodape {
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
+}
+.centraliza-rodape p {
+    margin-top: 38px;
+}

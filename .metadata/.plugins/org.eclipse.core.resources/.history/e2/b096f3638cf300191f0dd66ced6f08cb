@@ -1,0 +1,8 @@
+package br.com.fiap.rateldev.beans;
+
+public class LogWatson {
+	private int id;
+	private String local;
+	private String metodo;
+	private String descricao;
+}

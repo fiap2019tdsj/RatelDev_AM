@@ -1,0 +1,11 @@
+package br.com.fiap.rateldev.beans;
+
+import java.sql.Date;
+
+public class LogWatson {
+	private int id;
+	private String local;
+	private String metodo;
+	private String descricao;
+	private Date data;
+}

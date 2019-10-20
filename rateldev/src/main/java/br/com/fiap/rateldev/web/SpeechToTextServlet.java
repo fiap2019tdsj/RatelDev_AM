@@ -47,7 +47,6 @@ public class SpeechToTextServlet extends HttpServlet {
 				.audio(tempFile)
 				.contentType(HttpMediaType.AUDIO_WAV)
 				.model("pt-BR_BroadbandModel")
-				.languageCustomizationId("<language_customization_id>")
 				.build();
 		
 		SpeechRecognitionResults transcript = service.recognize(recognizeOptions)
@@ -59,7 +58,3 @@ public class SpeechToTextServlet extends HttpServlet {
 	
 	}
 }
-
-
-
-

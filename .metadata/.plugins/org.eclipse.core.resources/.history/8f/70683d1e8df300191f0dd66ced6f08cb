@@ -1,0 +1,18 @@
+package br.com.fiap.rateldev.beans;
+
+public class Menu {
+	private int id;
+	private String nome;
+	private String url;	
+	private String descricao;
+	
+	
+	public Menu(int id, String nome, String url, String descricao) {
+		this.id = id;
+		this.nome = nome;
+		this.url = url;
+		this.descricao = descricao;
+	}
+	
+	
+}

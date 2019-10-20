@@ -69,7 +69,7 @@
                     <span>Senha deve ter entre 8 e 100 caracteres!</span>
                 </div>
                 <div id="pop-up-repitaSenha">
-                    <span>Senhas nÃ£o conferem!</span>
+                    <span>Senhas não conferem!</span>
                 </div>
             </div>
         </div>

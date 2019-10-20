@@ -5,4 +5,5 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="br.com.fiap.rateldev.business.UsuarioBO"/>
 <fullyQualifiedTypeName name="br.com.fiap.rateldev.conexao.Conexao"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
 </qualifiedTypeNameHistroy>

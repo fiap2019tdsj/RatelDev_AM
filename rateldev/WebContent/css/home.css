@@ -5,6 +5,7 @@
     top: 0px;
     background-color: #141526;
     position: fixed;
+    z-index: 999;
 }
 .logo-topo{
     float: left;

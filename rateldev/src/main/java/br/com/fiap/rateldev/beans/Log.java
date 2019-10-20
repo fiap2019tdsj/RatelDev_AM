@@ -1,16 +1,28 @@
 package br.com.fiap.rateldev.beans;
 
+import java.sql.Date;
+
 public class Log {
 	private int id;
 	private String local;
 	private String metodo;
 	private String descricao;
+	private Date data;
 	
-	public Log(int id, String local, String metodo, String descricao) {
+	public Log(int id, String local, String metodo, String descricao, Date data) {
 		this.id = id;
 		this.local = local;
 		this.metodo = metodo;
 		this.descricao = descricao;
+		this.data = data;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
 	}
 
 	public int getId() {
