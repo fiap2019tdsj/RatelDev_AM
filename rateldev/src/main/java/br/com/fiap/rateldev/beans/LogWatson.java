@@ -5,11 +5,13 @@ import java.sql.Date;
 public class LogWatson {
 	private int id;
 	private String sentenca;
+	private Usuario usuario;
 	private Date data;
 	
-	public LogWatson(int id, String sentenca, Date data) {
+	public LogWatson(int id, String sentenca, Usuario usuario, Date data) {
 		this.id = id;
 		this.sentenca = sentenca;
+		this.usuario = usuario;
 		this.data = data;
 	}
 
@@ -35,5 +37,13 @@ public class LogWatson {
 
 	public void setData(Date data) {
 		this.data = data;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 }

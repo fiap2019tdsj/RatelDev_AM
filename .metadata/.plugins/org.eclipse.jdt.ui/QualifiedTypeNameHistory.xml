@@ -6,4 +6,8 @@
 <fullyQualifiedTypeName name="br.com.fiap.rateldev.business.UsuarioBO"/>
 <fullyQualifiedTypeName name="br.com.fiap.rateldev.conexao.Conexao"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="br.com.fiap.rateldev.beans.Menu"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="oracle.sql.DATE"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

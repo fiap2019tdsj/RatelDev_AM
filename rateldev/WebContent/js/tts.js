@@ -13,6 +13,15 @@ function sendMessageToVoice(msg) {
 	xhr.addEventListener("load", function() {
 		if(xhr.status == 200) {
 			// Codigo de sucesso
+			if (msg == "Eu não entendi. Você pode tentar reformular a frase.") {
+				var hiddenPergunta = document.querySelector("#hPergunta");
+				
+				var xhrLW = new XMLHttpRequest();
+				xhrLW.open("POST", "logWatson", true);
+				xhrLW.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=utf-8");
+				xhrLW.send("msg=" + hiddenPergunta.value);
+			}
+			
 			var blob = new Blob([xhr.response], {type : "audio/wav"});
 			createAudioElement(blob);
 		}else{

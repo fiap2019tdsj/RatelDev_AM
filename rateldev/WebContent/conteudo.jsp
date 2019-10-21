@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/chat.css">
     <link rel="stylesheet" type="text/css" href="css/conteudo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>ConteÃºdo</title>
+    <title>Conteúdo</title>    
 </head>
 <body>
     <div class="topo">
@@ -22,12 +24,16 @@
                     <li><b><i class="material-icons">
                             storage
                         </i></b>
-                        <ul>
-                            <li><a href="#">Story 1</a></li>
-                            <li><a href="#">Story 2</a></li>
-                            <li><a href="#">Story 3></a></li>
-                            <li><a href="#">Story 4 </a></li>
-                        </ul>
+                        <jsp:useBean id="dao" class="br.com.fiap.rateldev.dao.MenuDAO"/>
+							<ul>
+								<c:forEach var="menu" items="${dao.gerarMenu()}">
+									<li>
+										<a href="${menu.url}" title="${menu.descricao}">
+											${menu.nome}
+										</a>
+									</li>
+								</c:forEach>
+							</ul>
                     </li>
                 </ul>
             </nav>
@@ -82,6 +88,7 @@
                 <button id="recordButton">Record</button>
                 <button id="pauseButton" disabled>Pause</button>
                 <button id="stopButton" disabled>Stop</button>
+                <input type="hidden" id="hPergunta" />
             </div>
         </section>
         <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>

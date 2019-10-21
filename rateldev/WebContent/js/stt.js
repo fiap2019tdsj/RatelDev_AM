@@ -78,6 +78,8 @@ function sendBlobToText(blob) {
 		if(xhr.status == 200) {
 			// Deu bom
 			var resposta = JSON.parse(xhr.responseText);
+			var hiddenPergunta = document.querySelector("#hPergunta");
+			hiddenPergunta.value = resposta;
 			
 			callBot(resposta);
 			//resposta[0].alternatives.forEach(function(transcript) {

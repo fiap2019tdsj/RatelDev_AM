@@ -1,0 +1,28 @@
+package br.com.fiap.rateldev.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import br.com.fiap.rateldev.conexao.Conexao;
+
+public class MenuDAO {
+	private Connection con;
+	private PreparedStatement stmt;
+	private ResultSet rs;
+	
+	public MenuDAO() throws Exception {
+		con = Conexao.conectar();
+	}
+	
+	public Menu gerarMenu() throws Exception {
+		stmt = con.prepareStatement("select * from T_RD_MENU)");
+		rs = stmt.executeQuery();
+		
+		
+	}
+	
+	public void fecharConexao() throws Exception {
+		con.close();
+	}
+}
