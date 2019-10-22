@@ -1,14 +1,3 @@
-$(document).on('mousemove', function(e) {
-    var xPos = e.pageX;
-    var yPos = e.pageY;
-    // console.log(xPos, yPos);
-    $('.circle-out').css({
-      'top': yPos,
-      'left': xPos
-    });
-});
-
-
 window.onload = function() {
 	callBot("");
 }
@@ -54,7 +43,7 @@ function callBot(msg) {
 			var respostas = JSON.parse(xhr.responseText);
 			respostas.forEach(function(resposta) {
 				if(!(resposta === null) && !(resposta == ""))
-					sendMessageToVoice(resposta);
+					sendMessageToVoice(resposta.text);
 			});
 		} else {
 			// Codigo de deu ruim!

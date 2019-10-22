@@ -79,12 +79,10 @@ function sendBlobToText(blob) {
 			// Deu bom
 			var resposta = JSON.parse(xhr.responseText);
 			var hiddenPergunta = document.querySelector("#hPergunta");
-			hiddenPergunta.value = resposta;
-			
-			callBot(resposta);
-			//resposta[0].alternatives.forEach(function(transcript) {
-			//	createMessage(transcript.transcript, "me");
-			//});
+			resposta[0].alternatives.forEach(function(transcript) {
+				hiddenPergunta.value = transcript.transcript;
+				callBot(transcript.transcript);
+			});
 		} else {
 			// Deu ruim
 			console.log(xhr.status);

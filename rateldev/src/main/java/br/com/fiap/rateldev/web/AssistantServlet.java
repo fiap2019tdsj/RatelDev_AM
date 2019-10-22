@@ -10,66 +10,74 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 import com.ibm.cloud.sdk.core.service.security.IamOptions;
-import com.ibm.watson.assistant.v1.model.Context;
-import com.ibm.watson.assistant.v1.model.MessageInput;
-import com.ibm.watson.assistant.v1.model.MessageOptions;
-import com.ibm.watson.assistant.v1.model.MessageResponse;
-import com.ibm.watson.assistant.v1.Assistant;
+import com.ibm.watson.assistant.v2.Assistant;
+import com.ibm.watson.assistant.v2.model.CreateSessionOptions;
+import com.ibm.watson.assistant.v2.model.MessageContext;
+import com.ibm.watson.assistant.v2.model.MessageInput;
+import com.ibm.watson.assistant.v2.model.MessageInputOptions;
+import com.ibm.watson.assistant.v2.model.MessageOptions;
+import com.ibm.watson.assistant.v2.model.MessageResponse;
+import com.ibm.watson.assistant.v2.model.SessionResponse;
 
 @WebServlet(urlPatterns = "/chatbot")
-public class AssistantServlet extends HttpServlet {
-	
-	private Context context;
-	private static final long serialVersionUID = -8716683257301345455L;
+public class AssistantServlet extends HttpServlet{
 
+	private MessageContext context = new MessageContext();
+	private static final long serialVersionUID = 9052436307776407283L;
+	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
-			throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String msg = req.getParameter("question");
-		if (msg.isEmpty()) this.context = null;
+		System.out.println(msg);
 		
 		MessageResponse response = this.assistantAPICall(msg);
 		
 		resp.setContentType("application/json");
-		resp.getWriter().write(new Gson().toJson(response.getOutput().getText()));
+		resp.getWriter().write(new Gson().toJson(response.getOutput().getGeneric()));
+	
 	}
 
 	private MessageResponse assistantAPICall(String msg) {
-
+		
 		// Configuração de autenticação do serviço
 		IamOptions options = new IamOptions.Builder()
 				.apiKey("ZQd-enXOKkpH8WOpFNad_3qCdM3CSYpiPaXX6RBsDapT")
 				.build();
-		
 		// Criando o objeto do serviço desejado
-		Assistant service = new Assistant("2018-02-16", options);
-		String workspaceId = "d5522a24-7bb3-4b23-a813-333ecfb63809";
+		Assistant service = new Assistant("2019-02-28", options);
+		String assistantId = "d5522a24-7bb3-4b23-a813-333ecfb63809";
 		
-		// Preparando a mensagem de envio
-		MessageInput input = new MessageInput();
-		input.setText(msg);
+		//  Criando minha sessão
+		CreateSessionOptions sessionOptions = new CreateSessionOptions.Builder()
+				.assistantId(assistantId)
+				.build();
+		SessionResponse session = service.createSession(sessionOptions)
+				.execute()
+				.getResult();
+		String sessionId = session.getSessionId();
 		
-		// Configurando os parametros para o Watson
-		MessageOptions messageOptions = new MessageOptions.Builder()
-				.workspaceId(workspaceId)
+		// Definindo retorno do contexto
+		MessageInputOptions inputOptions = new MessageInputOptions();
+		inputOptions.setReturnContext(true);
+		
+		// Iniciando a Conversa com Washington
+		MessageInput input = new MessageInput.Builder()
+				.text(msg)
+				.options(inputOptions)
+				.build();
+		
+		MessageOptions optionsMessage = new MessageOptions.Builder()
+				.assistantId(assistantId)
+				.sessionId(sessionId)
 				.input(input)
 				.context(this.context)
 				.build();
 		
-		// Conectando com o Assistant e recebendo a resposta dele
-		MessageResponse response  = service.message(messageOptions)
+		MessageResponse response = service.message(optionsMessage)
 				.execute()
 				.getResult();
 		
 		this.context = response.getContext();
-		
-		// Verifica se as variaveis de contexto foram totalmente preenchidas
-		// Quando o nó de dialogo for completo reinicia o contexto
-		if (response.getContext().getSystem().getProperties().get("branch_exited") != null)
-			if ((boolean) response.getContext().getSystem().getProperties().get("branch_exited") &&
-					response.getContext().getSystem().getProperties().get("branch_exited_reason").equals("completed"))
-				this.context = null;
 		
 		return response;
 	}

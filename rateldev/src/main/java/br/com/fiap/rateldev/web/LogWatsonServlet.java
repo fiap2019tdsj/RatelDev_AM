@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.fiap.rateldev.dao.LogWatsonDAO;
 
-@WebServlet(urlPatterns="/login")
+@WebServlet(urlPatterns="/logWatson")
 public class LogWatsonServlet extends HttpServlet {
 	private static final long serialVersionUID = -8493414141725990094L;
 

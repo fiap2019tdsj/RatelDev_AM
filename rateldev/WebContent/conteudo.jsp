@@ -24,16 +24,6 @@
                     <li><b><i class="material-icons">
                             storage
                         </i></b>
-                        <jsp:useBean id="dao" class="br.com.fiap.rateldev.dao.MenuDAO"/>
-							<ul>
-								<c:forEach var="menu" items="${dao.gerarMenu()}">
-									<li>
-										<a href="${menu.url}" title="${menu.descricao}">
-											${menu.nome}
-										</a>
-									</li>
-								</c:forEach>
-							</ul>
                     </li>
                 </ul>
             </nav>
@@ -94,7 +84,6 @@
         <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
         <!-- Para a versão dois utilizar o script main.js -->
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/assistant.js"></script>
         <script type="text/javascript" src="js/tts.js"></script>
         <script type="text/javascript" src="js/stt.js"></script>
     <div class="caixa-chat">

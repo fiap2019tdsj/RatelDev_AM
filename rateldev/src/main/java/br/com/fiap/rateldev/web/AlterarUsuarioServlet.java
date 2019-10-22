@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.fiap.rateldev.business.UsuarioBO;
 
-@WebServlet(urlPatterns="/cadastroUsuario")
+@WebServlet(urlPatterns="/alterarUsuario")
 public class AlterarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 2935530492758106970L;
 
