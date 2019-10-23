@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/ratel.png" />
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/chat.css">
@@ -22,7 +23,7 @@
                 <h1>Spit</h1>
             </div>
             <div class="login-topo">
-                <i class="material-icons">account_circle</i>
+                <a href="login.jsp"><i class="material-icons">account_circle</i></a>
             </div> 
         </div>
     </div>
@@ -55,9 +56,8 @@
             <p>Ratel Dev.</p>
         </div>
     </div>
-    <div class="caixa-chat">
-        <!-- <img src="img/5a461410d099a2ad03f9c998.png" style="width: 50px;"> -->
+    <!-- <div class="caixa-chat">
         <img src="img/ratel.png">
-    </div>
+    </div> -->
 </body>
 </html>

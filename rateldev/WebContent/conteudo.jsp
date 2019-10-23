@@ -7,11 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/ratel.png" />
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/chat.css">
     <link rel="stylesheet" type="text/css" href="css/conteudo.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Conte�do</title>    
+    <title>Conte�do</title>    
 </head>
 <body>
     <div class="topo">
@@ -25,6 +26,16 @@
                             storage
                         </i></b>
                     </li>
+                    <jsp:useBean id="dao" class="br.com.fiap.rateldev.dao.MenuDAO"/>
+					<ul>
+						<c:forEach var="menu" items="${dao.gerarMenu()}">
+							<li>
+								<a href="${menu.url}" title="${menu.descricao}">
+									${menu.nome}
+								</a>
+							</li>
+						</c:forEach>
+					</ul>
                 </ul>
             </nav>
             <div class="login-topo">
@@ -67,27 +78,22 @@
             <p>Ratel Dev.</p>
         </div>
     </div>
-    <section class="container">
-            <h2 class="title">Chatbot Example w/ Watson API and Java</h2>
+    <div class="caixa-chat">
+        <section class="container">
+            <h2 class="title">Faça uma perguta!</h2>
             <div class="chat-container"></div>
-            <input type="text" id="question" name="question" class="field"
-                placeholder="Type your question or message to convert in audio" />
             <div class="controls">
-                <button id="sendQuestion">Send</button>
-                <button id="getVoiceButton">Get Voice</button>
-                <button id="recordButton">Record</button>
-                <button id="pauseButton" disabled>Pause</button>
-                <button id="stopButton" disabled>Stop</button>
+                <button id="recordButton"><i class="material-icons">mic</i></button>
+                <button id="pauseButton" disabled><i class="material-icons">pause</i></button>
+                <button id="stopButton" disabled><i class="material-icons">stop</i></button>
                 <input type="hidden" id="hPergunta" />
             </div>
         </section>
-        <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
-        <!-- Para a versão dois utilizar o script main.js -->
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/tts.js"></script>
-        <script type="text/javascript" src="js/stt.js"></script>
-    <div class="caixa-chat">
-        <img src="img/ratel.png">
     </div>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <!-- Para a versão dois utilizar o script main.js -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/tts.js"></script>
+    <script type="text/javascript" src="js/stt.js"></script>
 </body>
 </html>

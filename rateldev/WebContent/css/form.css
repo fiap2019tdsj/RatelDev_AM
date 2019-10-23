@@ -29,15 +29,15 @@ form {
 .passwordInput {
     height: 24px;
     width: 24px;
-    right: 4%;
-    margin-top: 1.7%;
+    right: 6%;
+    margin-top: -2.7%;
     position: absolute;
 }
 .passwordShowInput {
     height: 24px;
     width: 24px;
-    right: 4%;
-    margin-top: 1.7%;
+    right: 6%;
+    margin-top: -2.7%;
     position: absolute;
     cursor: pointer;
 }

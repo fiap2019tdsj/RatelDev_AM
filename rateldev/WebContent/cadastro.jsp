@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/ratel.png" />
     <link rel="stylesheet" type="text/css" href="css/form.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -69,7 +70,7 @@
                     <span>Senha deve ter entre 8 e 100 caracteres!</span>
                 </div>
                 <div id="pop-up-repitaSenha">
-                    <span>Senhas não conferem!</span>
+                    <span>Senhas nï¿½o conferem!</span>
                 </div>
             </div>
         </div>
