@@ -2,6 +2,16 @@ package br.com.fiap.rateldev.beans;
 
 import java.sql.Date;
 
+/**
+ * class responsável por receber a mensagens que não conseguimos responder no watson
+ * contendo os metodo get e set para cada parametro
+ * @param id recebe o id 
+ * @param setenca ira receber as setencas do watson
+ * @param data
+ * @author bruno
+ * @version 1.0
+ *
+ */
 public class LogWatson {
 	private int id;
 	private String sentenca;

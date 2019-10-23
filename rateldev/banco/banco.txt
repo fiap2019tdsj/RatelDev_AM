@@ -1,0 +1,147 @@
+DROP SEQUENCE sequence_id_usuario; 
+DROP SEQUENCE sequence_id_menu;
+DROP SEQUENCE sequence_id_log;
+DROP SEQUENCE sequence_id_log_watson;
+
+drop table T_RD_LOG;
+drop table T_RD_MENU;
+drop table T_RD_LOG_WATSON;
+drop table T_RD_USUARIO;
+
+
+
+create sequence sequence_id_usuario
+start with 1
+increment by 1
+maxvalue 99999
+nocache
+nocycle;
+
+create sequence sequence_id_log_watson
+start with 1
+increment by 1
+maxvalue 99999
+nocache
+nocycle;
+
+create sequence sequence_id_log
+start with 1
+increment by 1
+maxvalue 99999
+nocache
+nocycle;
+
+create sequence sequence_id_menu
+start with 1
+increment by 1
+maxvalue 99999
+nocache
+nocycle;
+
+create table T_RD_USUARIO(
+id_usuario integer primary key ,
+nm_usuario varchar(100),
+ds_email varchar(100),
+ds_senha varchar (100)
+);
+
+
+create table T_RD_LOG_WATSON(
+id_log_watson integer primary key,
+ds_setenca varchar(100),
+id_usuario integer references T_RD_USUARIO (id_usuario),
+dt_data date
+);
+
+
+
+create table T_RD_MENU(
+id_menu integer primary key,
+nm_nome varchar(100),
+ds_url varchar(100),
+ds_descricao varchar(100)
+);
+
+
+
+create table T_RD_LOG(
+id_log integer primary key,
+ds_local varchar(100),
+ds_metodo varchar(100),
+ds_descricao varchar(100)
+);
+
+
+insert into T_RD_USUARIO(id_usuario,nm_usuario,ds_email,ds_senha)
+VALUES(sequence_id_usuario.nextval,'Jason','jason@hotmail.com','jason124');
+
+insert into T_RD_USUARIO(id_usuario,nm_usuario,ds_email,ds_senha)
+VALUES(sequence_id_usuario.nextval,'Goky','son@hotmail.com','gk456');
+
+insert into T_RD_USUARIO(id_usuario,nm_usuario,ds_email,ds_senha)
+VALUES(sequence_id_usuario.nextval,'jay','jay@hotmail.com','jaon124');
+
+
+select * from T_RD_USUARIO where id_usuario =3;
+select * from T_RD_USUARIO where ds_email = 'jay@hotmail.com';
+
+
+update T_RD_USUARIO
+set ds_senha = '5463'
+where id_usuario = 3;
+
+update T_RD_USUARIO
+set ds_senha = '471'
+where id_usuario = 1;
+
+
+delete from T_RD_USUARIO where id_usuario = 2;
+
+
+insert into T_RD_LOG_WATSON (id_log_watson,ds_setenca,id_usuario,dt_data) 
+values (sequence_id_log_watson.nextval,'umasentecas',2,to_Date('2019-10-23','YYYY-MM-DD'));
+
+insert into T_RD_LOG_WATSON (id_log_watson,ds_setenca,id_usuario,dt_data) 
+values (sequence_id_log_watson.nextval,'mamlops',1,to_Date('2019-10-24','YYYY-MM-DD'));
+
+insert into T_RD_LOG_WATSON (id_log_watson,ds_setenca,id_usuario,dt_data) 
+values (sequence_id_log_watson.nextval,'poll',3,to_Date('2019-10-3','YYYY-MM-DD'));
+
+
+select * from T_RD_LOG_WATSON where id_usuario = 1;
+
+update T_RD_LOG_WATSON 
+set ds_setenca = 'uma nova'
+where id_log_watson = 1;
+
+
+insert into T_RD_MENU(id_menu,nm_nome,ds_url,ds_descricao) 
+values (sequence_id_menu.nextval, 'opation','option.html//', 'a nova opção');
+
+insert into T_RD_MENU(id_menu,nm_nome,ds_url,ds_descricao) 
+values (sequence_id_menu.nextval, 'ulp','ulp.html//', 'a nova opacion');
+
+
+update T_RD_MENU 
+set nm_nome = 'atualizado'
+ where id_menu = 1;
+
+select * from T_RD_MENU where id_menu = 2;
+
+
+insert into T_RD_LOG(id_log,ds_local,ds_metodo,ds_descricao) 
+values (sequence_id_log.nextval,'EUA','misterio','description');
+
+insert into T_RD_LOG(id_log,ds_local,ds_metodo,ds_descricao) 
+values (sequence_id_log.nextval,'EU','magic','desc');
+
+insert into T_RD_LOG(id_log,ds_local,ds_metodo,ds_descricao) 
+values (sequence_id_log.nextval,'NA','fake','ualop');
+
+
+update T_RD_LOG 
+set ds_descricao = 'essa nova desc atualizada'
+where id_log = 1;
+
+
+select * from T_RD_LOG where id_log = 1;

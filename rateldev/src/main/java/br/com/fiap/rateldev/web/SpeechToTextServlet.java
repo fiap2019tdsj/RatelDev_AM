@@ -18,11 +18,25 @@ import com.ibm.watson.speech_to_text.v1.SpeechToText;
 import com.ibm.watson.speech_to_text.v1.model.RecognizeOptions;
 import com.ibm.watson.speech_to_text.v1.model.SpeechRecognitionResults;
 
+/**
+ * Servlet 'SpeechToTextServlet é responsável por fazer a requisição de texto para voz
+ * utilizando a aplicação Json.
+ * 
+ * 
+ * 
+ * @author RatelDev
+ * @version 1.0
+ *
+ */
 @WebServlet(urlPatterns = "/stt")
 public class SpeechToTextServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 7476959821119009111L;
 
+	/**
+	 * metodo doPost envia dados para serem processados. 
+	 * @version 1.0
+	 */
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		byte[] buffer = new byte[1024 * 1024];

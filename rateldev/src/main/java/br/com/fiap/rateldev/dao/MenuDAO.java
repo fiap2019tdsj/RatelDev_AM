@@ -18,6 +18,13 @@ public class MenuDAO {
 		con = Conexao.conectar();
 	}
 	
+	/**
+	* metodo gerarmenu que ira retornar uma lista de dados salvos no banco
+	*
+	*@return lista
+	*
+	*
+	*/
 	public List<Menu> gerarMenu() throws Exception {
 		stmt = con.prepareStatement("select * from T_RD_MENU)");
 		rs = stmt.executeQuery();
@@ -36,6 +43,10 @@ public class MenuDAO {
 		return lm;
 	}
 	
+	/**
+	 * metodo responsável por fechar a conexão com o banco após uma tarefa
+	 * @throws Exception
+	 */
 	public void fecharConexao() throws Exception {
 		con.close();
 	}

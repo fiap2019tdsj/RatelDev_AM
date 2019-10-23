@@ -15,11 +15,22 @@ import com.ibm.watson.text_to_speech.v1.TextToSpeech;
 import com.ibm.watson.text_to_speech.v1.model.SynthesizeOptions;
 import com.ibm.watson.text_to_speech.v1.util.WaveUtils;
 
+/**
+ * Servlet TextToSpeechServlet é responsável por fazer a requisição do texto para voz, apartir do 
+ * front 
+ * @author RatelDev
+ * @version 1.0
+ *
+ */
 @WebServlet(urlPatterns = "/tts")
 public class TextToSpeechServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1553566979042668816L;
 
+	/**
+	 * metodo doPost envia dados para serem processados. 
+	 * @version 1.0
+	 */
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String msg = req.getParameter("question");

@@ -1,5 +1,15 @@
 package br.com.fiap.rateldev.beans;
 
+/**
+ * **a class menu é responsável por ter as propriedades do menu, contendo nela
+ * os métodos get e set para cada atributo  
+ * @param nome que é usado para dar nome a opção do menu
+ * @param url 
+ * @param descricao indica a descricao do menu
+ * @author RatelDev
+ * @version 1.0
+ *
+ */
 public class Menu {
 	private int id;
 	private String nome;

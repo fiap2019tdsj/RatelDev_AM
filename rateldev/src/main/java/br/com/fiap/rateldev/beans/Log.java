@@ -2,6 +2,17 @@ package br.com.fiap.rateldev.beans;
 
 import java.sql.Date;
 
+/**
+ * **
+ * class log é responsável por carregar as propriedades do log contendo metodo get e set
+ * @param id
+ * @param local
+ * @param metodo 
+ * @param descricao 
+ * @author RatelDev
+ * @version 1.0
+ *
+ */
 public class Log {
 	private int id;
 	private String local;

@@ -3,6 +3,13 @@ package br.com.fiap.rateldev.conexao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+/**
+ * Class responsável por fazer a conexão com o banco de dados
+ * 
+ * @author RatelDev
+ * @version 1.0
+ *
+ */
 public class Conexao {
 	public static Connection conectar() throws Exception {
 		Class.forName("oracle.jdbc.driver.OracleDriver");

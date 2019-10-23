@@ -13,10 +13,23 @@ import javax.servlet.http.HttpSession;
 import br.com.fiap.rateldev.beans.Usuario;
 import br.com.fiap.rateldev.business.UsuarioBO;
 
+/**
+ * loginServlet responsável por fazer a requisição de login no sistema da class UsuarioBO acessando
+ * o metodo login dela e possui dois parametros
+ * @param email que é o login do usuario
+ * @param senha que é responsável por receber a senha do usuario 
+ * @author RatelDev
+ * @version 1.0
+ *
+ */
 @WebServlet(urlPatterns="/login")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = -6391586299833544717L;
 
+	/**
+	 * metodo doPost envia dados para serem processados. 
+	 * @version 1.0
+	 */
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");

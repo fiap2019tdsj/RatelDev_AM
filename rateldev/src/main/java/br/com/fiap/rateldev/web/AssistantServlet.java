@@ -19,12 +19,22 @@ import com.ibm.watson.assistant.v2.model.MessageOptions;
 import com.ibm.watson.assistant.v2.model.MessageResponse;
 import com.ibm.watson.assistant.v2.model.SessionResponse;
 
+/**
+ * essa servlet é responsável por fazer integração com a API Assistant do watson
+ * 
+ * @author RatelDev
+ * @version 1.0
+ */
 @WebServlet(urlPatterns = "/chatbot")
 public class AssistantServlet extends HttpServlet{
 
 	private MessageContext context = new MessageContext();
 	private static final long serialVersionUID = 9052436307776407283L;
 	
+	/**
+	 * metodo doPost envia dados para serem processados. 
+	 * @version 1.0
+	 */
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String msg = req.getParameter("question");
@@ -37,6 +47,11 @@ public class AssistantServlet extends HttpServlet{
 	
 	}
 
+	/**
+	 * metodo assistantAPICall  faz a conexão com o Assistant recebendo mensagens e enviando elas
+	 * @return responde
+	 * @version 1.0 
+	 */
 	private MessageResponse assistantAPICall(String msg) {
 		
 		// Configuração de autenticação do serviço
