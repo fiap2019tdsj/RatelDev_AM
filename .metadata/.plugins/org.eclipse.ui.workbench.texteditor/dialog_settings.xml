@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="sg.isEmpty()) this.context = null;"/>
+		<item key="selection" value="caixa-chat"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="sg.isEmpty()) this.context = null;"/>
-			<item value="//resposta[0].alternatives.forEach(function(transcript) {"/>
-			<item value=":useBean id=&quot;dao&quot; class=&quot;br.com.fiap.rateldev.dao.MenuDAO&quot;/&gt;"/>
-			<item value="n id=&quot;dao&quot; class=&quot;br.com.fiap.rateldev.dao.MenuDAO&quot;/&gt;"/>
-			<item value="create"/>
-			<item value="createaud"/>
-			<item value="createAudioElement"/>
-			<item value="call"/>
+			<item value="caixa-chat"/>
+			<item value="display: n"/>
+			<item value="hidden"/>
+			<item value="container"/>
+			<item value="conteudo.js"/>
+			<item value="title"/>
+			<item value="section"/>
+			<item value="faça"/>
+			<item value="form.css"/>
+			<item value="form"/>
+			<item value="h1"/>
+			<item value="pop-up"/>
+			<item value="pop-up-er"/>
+			<item value=".erro"/>
+			<item value="senha"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Usuario retorno = UsuarioBO.login"/>

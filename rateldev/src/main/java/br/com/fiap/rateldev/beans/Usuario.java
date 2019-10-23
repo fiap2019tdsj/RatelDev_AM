@@ -3,9 +3,6 @@ package br.com.fiap.rateldev.beans;
 /**
  * **
  * essa class tem as propriedades do Usuario e possui os metodos get e set
- * @param nome recebe o nome do usuario 
- * @param email recebe o email do usuario
- * @param  senha recebe senha do usuario
  * @author RatelDev
  * @version 1.0
  * 

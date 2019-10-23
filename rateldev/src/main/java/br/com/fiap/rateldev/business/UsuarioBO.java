@@ -33,9 +33,8 @@ public class UsuarioBO {
 	 * cadastrar dessas duas instancia 
 	 * @param nome recbe nome do usuario
 	 * @param email, recebe email do usuario
-	 * @param confirmarsenha. recbe a confirmação de senha do usuario
+	 * @param confirmarSenha. recbe a confirmação de senha do usuario
 	 * @return retorna um boolean udao que é instancia da class usuarioDAO
-	 * @exception exceptionMsg caso ocorra uma exceção 
 	 * @author RatelDev
 	 * @version 1.0
 	 */

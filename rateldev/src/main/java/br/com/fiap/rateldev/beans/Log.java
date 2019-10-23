@@ -5,10 +5,6 @@ import java.sql.Date;
 /**
  * **
  * class log é responsável por carregar as propriedades do log contendo metodo get e set
- * @param id
- * @param local
- * @param metodo 
- * @param descricao 
  * @author RatelDev
  * @version 1.0
  *
