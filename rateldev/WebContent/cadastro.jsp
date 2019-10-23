@@ -17,12 +17,8 @@
         <div class="container-esquerdo">
             <div class="container-conteudo">
                 <h1>
-                    Lorem Ipsum
+                    Cadastre-se para ter acesso ao melhor conteúdo de Storytelling
                 </h1>
-                <br>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
                 <div class="img-conteudo-esquerdo">
                     <img src="img/book-cartoon-books-simple.png"/>
                 </div>
@@ -31,11 +27,10 @@
         <div class="container-direito">
             <div class="container-conteudo">
                 <div class="logo-form">
-                    <h1>Spit</h1>
+                    <a href="home.jsp" class="home"><h1>Spit</h1></a>
                 </div>
                 <form action="#" method="POST" id="fomCadastro">
                     <fieldset>
-                        <legend>Dados para o cadastro:</legend>
                         <div class="form-group">
                             <label for="nome">Nome</label>
                             <input type="text" class="form-control" id="nome" name="nome" maxlength="40">
@@ -70,7 +65,10 @@
                     <span>Senha deve ter entre 8 e 100 caracteres!</span>
                 </div>
                 <div id="pop-up-repitaSenha">
-                    <span>Senhas nï¿½o conferem!</span>
+                    <span>Senhas não conferem!</span>
+                </div>
+                <div id="pop-up-erro">
+                    <span></span>
                 </div>
             </div>
         </div>

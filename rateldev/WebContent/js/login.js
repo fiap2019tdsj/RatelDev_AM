@@ -35,7 +35,18 @@ function entrar() {
     else {
         document.getElementById("pop-up-msg").style.display = "none";
         document.getElementById("email").style.border = "solid 1px #fff";
-        document.getElementById("formulario").submit();
+        $.post("login", { email : email, senha: senha }, function(r) {
+                if(r = "Ok"){
+                    window.location.href = "conteudo.jsp";
+                }else{
+                    var div = document.getElementById("pop-up-erro");
+                    
+                    div.style.display = "block";
+                    div.innerText = "Houve um erro no processamento dos dados. Caso o erro persista, favor entrar em contato com o o suporte";
+
+                }
+            }
+        );
     }   
 }
 
@@ -72,6 +83,3 @@ function toggleAcessar() {
         btnAcessar.classList.remove("hoverPointer");
     }
 }
-
-
-

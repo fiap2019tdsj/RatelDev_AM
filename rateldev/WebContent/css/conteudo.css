@@ -40,18 +40,19 @@
     float: left;
     padding: 34px;
     width: 70.9%;
-    height: 430px;
     background-color: #141526;
+}
+.bloco-texto h1 {
+    margin-bottom: 1%;
 }
 .bloco-img {
     float: left;
     padding: 68px 10px 0px 10px;
     width: 22.5%;
-    height: 430px;
     background-color: #141526;
 }
 .bloco-img img {
-    width: 245px;
+    width: 100%;
 }
 .topico {
     width: 1349px;
@@ -75,6 +76,7 @@
     height: 60px;
     overflow: visible;
     bottom: 0px;
+    border-top: 1px solid #141510;
 }
 .centraliza-rodape {
     max-width: 1300px;
@@ -86,17 +88,15 @@
 }
 
 
-nav  .menu {
-    
+nav .menu {
+    position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: 15%;
     color: #141526;
     width: 100px;
-    background-color: #26273b;
+    background-color: #141526;
+    border-bottom: 1px solid #141510;
 
-}
-nav .menu{
-    position: fixed;
 }
 nav ul ul {
     display: none;
@@ -186,6 +186,11 @@ nav ul ul li a {
     bottom: 150px;
 }  
 
+.topicoConteudo {
+	display: block;
+	height: 380px;
+}
+
 
 .img-left #move-left {
     position: relative;
@@ -201,9 +206,19 @@ nav ul ul li a {
 }
 .material-icons {
     float: left;
-    margin: 17px;
+    margin: 11px;
 }
 .material-icons:hover {
     color: #1fa5e9;
     cursor: pointer;
+}
+
+.title {
+    background-color: #3C3D52;
+    border: 1px solid #3C3D52;
+    padding: 2%; 
+}
+
+.title2 {
+	text-align: center;
 }

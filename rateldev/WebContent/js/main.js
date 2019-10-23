@@ -23,15 +23,6 @@ function createDiv(text, type) {
 	return div;
 }
 
-var btnSendQuestion = document.querySelector("#sendQuestion");
-btnSendQuestion.addEventListener("click", function(event) {
-	event.preventDefault();
-	var question = document.querySelector("#question");
-	createMessage(question.value, "me");
-	callBot(question.value);
-	question.value = "";
-});
-
 function callBot(msg) {
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "chatbot", true);
@@ -55,3 +46,23 @@ function callBot(msg) {
 	var data = "question=" + msg;
 	xhr.send(data);
 }
+
+var assistant = document.querySelector(".title");
+assistant.addEventListener("click", function() {
+	var chat = document.querySelector(".container");
+	if (chat.classList.contains('hide')) {
+		chat.classList.remove("hide");
+	} else {
+		chat.classList.add("hide");
+	}
+});
+
+var assistant2 = document.querySelector(".title2");
+assistant2.addEventListener("click", function() {
+	var chat = document.querySelector(".container");
+	if (chat.classList.contains('hide')) {
+		chat.classList.remove("hide");
+	} else {
+		chat.classList.add("hide");
+	}
+});

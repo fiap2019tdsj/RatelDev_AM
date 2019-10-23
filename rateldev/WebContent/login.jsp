@@ -17,12 +17,8 @@
         <div class="container-esquerdo">
             <div class="container-conteudo">
                 <h1>
-                    Lorem Ipsum
+                    Encontre tudo o que você precisa aqui
                 </h1>
-                <br>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
                 <div class="img-conteudo-esquerdo">
                     <img src="img/book-cartoon-books-simple.png"/>
                 </div>
@@ -31,7 +27,7 @@
         <div class="container-direito">
             <div class="container-conteudo">
                 <div class="logo-form">
-                    <h1>Spit</h1>
+                    <a href="home.jsp" class="home"><h1>Spit</h1></a>
                 </div>
                 <form action="#" method="POST" name="formLogin" id="formLogin">
                     <fieldset>
@@ -51,9 +47,13 @@
                         <div class="form-group">
                             <button type="submit" class="form-control" id="btnEntrar" onclick="return entrar()" name="btnEntrar" title="Preencha todos os campos!">Entrar</button>
                         </div>
+                        <a href="cadastro.jsp" id="cadastrar">Não possui cadastro? Crie um aqui!</a>
                     </fieldset>
                 </form>
                 <div id="pop-up-msg">
+                    <span>Preencha os campos corretamente!</span>
+                </div>
+                <div id="pop-up-erro">
                     <span>Preencha os campos corretamente!</span>
                 </div>
             </div>

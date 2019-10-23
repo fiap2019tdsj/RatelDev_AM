@@ -41,3 +41,13 @@ form {
     position: absolute;
     cursor: pointer;
 }
+#pop-up-msg {
+	display: none;
+}
+#pop-up-erro {
+	display: none;
+}
+
+h1 {
+	font-size: 2em;
+}

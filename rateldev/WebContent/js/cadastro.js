@@ -26,8 +26,19 @@ function cadastrar() {
         document.getElementById("pop-up-repitaSenha").style.display = "block";
         return false;
     }
-
-    document.getElementById("formulario").submit();
+    
+    $.post("cadastroUsuario", { nome : nome, email : email, senha: senha, repitaSenha: confirmarSenha }, function(r){
+            if(r = "Ok"){
+                setTimeout(function() { 
+                    location.reload(); 
+                }, 3000);
+            } else {
+                var div = document.pop-up-erro("erro");
+                div.style.display = "block";
+                div.innerText = "Houve um erro no processamento dos dados. Caso o erro persista, favor entrar em contato com o o suporte";
+            }
+        }
+    );
 }
 
 $("#fomCadastro").onchange(function() {

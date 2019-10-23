@@ -1,11 +1,3 @@
-var btnGetVoice = document.querySelector("#getVoiceButton");
-btnGetVoice.addEventListener("click", function(event) {
-	event.preventDefault();
-	var question = document.querySelector("#question");
-	sendMessageToVoice(question.value);
-	question.value = "";
-});
-
 function sendMessageToVoice(msg) {
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "tts", true);
