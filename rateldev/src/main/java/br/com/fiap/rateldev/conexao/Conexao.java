@@ -9,6 +9,7 @@ public class Conexao {
 	/**
 	 * O método conectar é responsável por fazer a conexão com o banco de dados
 	 * @throws Exception
+	 * @return retorna uma conexão com o banco
 	 * @author RatelDev
 	 * @version 1.0
 	 */

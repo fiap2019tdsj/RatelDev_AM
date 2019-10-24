@@ -120,8 +120,8 @@ public class UsuarioDAO {
 	
 	/**
 	 * Método de alterar, é responsável por alterar dados do usuario.
+	 * @param id, id do usuário logado
 	 * @param nome, nome digitado pelo usuário
-	 * @param email, email digitado pelo usuário
 	 * @param senha, senha digitado pelo usuário
 	 * @throws Exception
 	 * @return retorna true caso o usuário seja alterado no banco, caso contrário retorna false

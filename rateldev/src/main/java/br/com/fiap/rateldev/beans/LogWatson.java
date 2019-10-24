@@ -18,7 +18,7 @@ public class LogWatson {
 	 * ** Cria um histórico de perguntas não entendidas pelo chatbot
 	 * @param id, id do histórico
 	 * @param sentenca, a pergunta feita pelo usuário
-	 * @param idUsuario, id que representa o usuário que fez a pergunta
+	 * @param usuario, o usuário que fez a pergunta
 	 * @param data, data que a pergunta foi feita
 	 */
 	public LogWatson(int id, String sentenca, Usuario usuario, Date data) {

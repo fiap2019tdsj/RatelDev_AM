@@ -107,6 +107,7 @@ public class UsuarioBO {
 	
 	/**
 	 * O método alterar, realizará alterarações nos dados do usuario
+	 * @param id, recebe id do usuário
 	 * @param nome, recebe nome do usuário
 	 * @param senha, recebe a senha do usuário
 	 * @param confirmarSenha, recebe a confirmação de senha do usuario
