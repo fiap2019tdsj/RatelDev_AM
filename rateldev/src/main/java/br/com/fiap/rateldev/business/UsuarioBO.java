@@ -8,11 +8,12 @@ import br.com.fiap.rateldev.dao.UsuarioDAO;
 
 public class UsuarioBO {
 	/**
-	 *  esse metodo  sera responsável pela validação do email
-	 *  @return class retorna "padrao.matcher"
+	 * Método isValid será responsável pela validação do email
+	 * @param email, recebe o email do usuário
+	 * @return retorna true caso o email se encaixe no padrão definido pela variável emailRegex
+	 * caso contrário, retorna false
 	 * @author RatelDev
 	 * @version 1.0
-	 *
 	 */
 	public static boolean isValid(String email) 
     { 
@@ -28,13 +29,14 @@ public class UsuarioBO {
     } 
 	
 	/**
-	 * o metodo cadastrar é responsável pelo cadastro de usuario no sistema ela possui 4 parâmetros 
-	 * e tem retorno. esse metodo possui duas instancia 'UsuarioDAO' e LogDAO que utilizam o metodo 
-	 * cadastrar dessas duas instancia 
-	 * @param nome recbe nome do usuario
-	 * @param email, recebe email do usuario
-	 * @param confirmarSenha. recbe a confirmação de senha do usuario
-	 * @return retorna um boolean udao que é instancia da class usuarioDAO
+	 * O método cadastrar é responsável pelo cadastro do usuário no sistema e pelo registro
+	 * desse cadastro no histórico.
+	 * @param nome, recebe nome do usuário
+	 * @param email, recebe email do usuário
+	 * @param senha, recebe a senha do usuário
+	 * @param confirmarSenha, recebe a confirmação de senha do usuario
+	 * @exception Exception caso qualquer uma das validações realizadas não retorne vazia.
+	 * @return retorna true caso o cadastro tenha sido bem sucedido, caso contrário, retorna false
 	 * @author RatelDev
 	 * @version 1.0
 	 */
@@ -104,15 +106,14 @@ public class UsuarioBO {
 	}
 	
 	/**
-	 * metodo alterar, ira alterar dados do usuario
-	 * @param nome 
-	 * @param senha 
-	 * @param confirmarSenha
-	 * @return ira retornar o metdo alterar da class UsuarioDAO, esse retorno possui 3 parametros 
-	 * id, nome e senha
+	 * O método alterar, realizará alterarações nos dados do usuario
+	 * @param nome, recebe nome do usuário
+	 * @param senha, recebe a senha do usuário
+	 * @param confirmarSenha, recebe a confirmação de senha do usuario
+	 * @exception Exception caso qualquer uma das validações realizadas não retorne vazia.
+	 * @return retorna true caso a alteração tenha sido bem sucedida, caso contrário, retorna false
 	 * @author RatelDev
 	 * @version 1.0
-	 * 
 	 */
 	public static boolean alterar(int id, String nome, String senha, String confirmarSenha) throws Exception {
 		UsuarioDAO udao = new UsuarioDAO();
@@ -168,14 +169,14 @@ public class UsuarioBO {
 	}
 	
 	/**
-	 * metodo login responsável pelo algoritmo de realizar login no sistema, neste metodo
-	 * temos validações para email e senha. 
-	 * @param email que sera 'username'
-	 * @param senha 
-	 * @return retornar um usuario 
+	 * O método login é responsável pela realização do login do usuário no sistema
+	 * @param email, recebe email do usuário
+	 * @param senha, recebe a senha do usuário
+	 * @exception Exception caso qualquer uma das validações realizadas não retorne vazia.
+	 * @return retorna um usuario caso os parâmetros enviados sejam encontrados no banco de dados
+	 * caso contrário, retorna null
 	 * @author RatelDev
 	 * @version 1.0
-	 * 
 	 */
 	public static Usuario login(String email, String senha) throws Exception {
 		UsuarioDAO udao = new UsuarioDAO();

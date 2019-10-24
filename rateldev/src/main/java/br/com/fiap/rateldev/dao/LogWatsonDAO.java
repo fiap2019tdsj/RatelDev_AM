@@ -16,11 +16,14 @@ public class LogWatsonDAO {
 	}
 	
 	/**
-	 * método responsável por fazer o insert na tabela T_RD_LOG_WATSON, possui um retorno boolean 
-	 * com os parametro(setenca, idUsuario e data)
-	 * 
+	 * O método cadastrar é responsável por fazer o cadastro de histórico de perguntas não entendidas, 
+	 * pelo chatbot 
+	 * @param sentenca, recebe a pergunta feita pelo usuário
+	 * @param idUsuario, id que representa o usuário que fez a pergunta
+	 * @param data, data que a pergunta foi feita
+	 * @throws Exception
+	 * @return retorna true caso o cadastro tenha sido bem sucedido, caso contrário, retorna false
 	 * @author RatelDev
-	 * @return boolean 
 	 * @version 1.0
 	 */
 	public boolean cadastrar(String sentenca, int idUsuario, Date data) throws Exception {
@@ -36,7 +39,7 @@ public class LogWatsonDAO {
 	}
 	
 	/**
-	 * metodo responsável por fechar a conexão com o banco após uma tarefa
+	 * Método responsável por fechar a conexão com o banco após uma tarefa
 	 * @throws Exception
 	 */
 	public void fecharConexao() throws Exception {

@@ -14,11 +14,12 @@ public class LogDAO {
 	}
 	
 	/**
-	 * metodo de cadastrar ira salvar os dados no banco de dados na tabela 'T_RD_LOG com os parametros
-	 * @param local
-	 * @param  metodo
-	 * @param descricao
-	 * @return boolean 
+	 * O método cadastrar salvará os dados no banco de dados com os parâmetros enviados
+	 * @param local, local onde o método foi chamado
+	 * @param metodo, método utilizado
+	 * @param descricao, descrição da ação do usuário
+	 * @throws Exception
+	 * @return retorna true caso o cadastro tenha sido bem sucedido, caso contrário, retorna false
 	 * @author RatelDev
 	 * @version 1.0
 	 */
@@ -35,7 +36,7 @@ public class LogDAO {
 	}
 	
 	/**
-	 * metodo responsável por fechar a conexão com o banco após uma tarefa
+	 * Método responsável por fechar a conexão com o banco após uma tarefa
 	 * @throws Exception
 	 */
 	public void fecharConexao() throws Exception {

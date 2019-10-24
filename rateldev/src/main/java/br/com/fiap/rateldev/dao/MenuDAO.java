@@ -19,11 +19,9 @@ public class MenuDAO {
 	}
 	
 	/**
-	* metodo gerarmenu que ira retornar uma lista de dados salvos no banco
-	*
-	*@return lista
-	*
-	*
+	*Método gerarMenu retornará uma lista de menus cadastrados no banco
+	*@throws Exception
+	*@return retorna uma lista de menus cadastrados
 	*/
 	public List<Menu> gerarMenu() throws Exception {
 		stmt = con.prepareStatement("select * from T_RD_MENU)");
@@ -44,7 +42,7 @@ public class MenuDAO {
 	}
 	
 	/**
-	 * metodo responsável por fechar a conexão com o banco após uma tarefa
+	 * Método responsável por fechar a conexão com o banco após uma tarefa
 	 * @throws Exception
 	 */
 	public void fecharConexao() throws Exception {
